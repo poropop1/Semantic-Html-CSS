@@ -1,0 +1,355 @@
+
+/* =====================================================
+Delicious Restaurant Responsive Website
+===================================================== */
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* COLORS */
+
+:root {
+--primary: #5C3A21;
+--secondary: #FFF8F0;
+--neutral: #F5F2EC;
+--dark: #2C241B;
+--shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+/* BODY */
+
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: var(--neutral);
+color: #2C241B;
+line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+background: var(--primary);
+color: white;
+text-align: center;
+padding: 35px 20px;
+}
+
+header h1 {
+margin: 0;
+font-size: 2.5rem;
+}
+
+header p {
+margin-top: 10px;
+font-size: 1rem;
+color: #F8EAD8;
+}
+
+/* NAVIGATION */
+
+nav {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 12px;
+background: #3E2C23;
+padding: 18px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+padding: 10px 22px;
+border-radius: 30px;
+transition: .3s;
+}
+
+nav a:hover {
+background: #D4A373;
+transform: translateY(-2px);
+}
+
+/* MAIN */
+
+main {
+max-width: 1200px;
+margin: auto;
+padding: 20px;
+}
+
+section {
+margin: 70px 0;
+}
+
+section h2 {
+text-align: center;
+}
+
+/* HERO */
+
+.hero {
+text-align: center;
+padding: 60px 20px;
+}
+
+.hero h2 {
+font-size: 2.2rem;
+margin-bottom: 20px;
+}
+
+.hero p {
+max-width: 800px;
+margin: auto;
+margin-bottom: 30px;
+color: #555;
+}
+
+.hero img {
+display: block;
+margin: 30px auto;
+width: 100%;
+max-width: 900px;
+border-radius: 15px;
+box-shadow: var(--shadow);
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+text-decoration:none;
+background:var(--primary);
+color:white;
+padding:12px 25px;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#8B5E3C;
+transform:translateY(-3px);
+}
+
+.btn-outline{
+background:transparent;
+border:2px solid var(--primary);
+color:var(--primary);
+}
+
+.btn-outline:hover{
+background:var(--primary);
+color:white;
+}
+
+/* IMAGES */
+
+img {
+max-width: 100%;
+height: auto;
+display: block;
+border-radius: 10px;
+}
+
+/* MENU */
+
+.menu-layout {
+display: grid;
+grid-template-columns: 1fr;
+gap: 25px;
+align-items: start;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+background: #FFF8F0;
+padding: 20px;
+border-radius: 10px;
+box-shadow: var(--shadow);
+height: fit-content;
+align-self: start;
+}
+
+.sidebar h2 {
+margin-top: 0;
+text-align: center;
+}
+
+.sidebar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.sidebar li {
+padding: 10px;
+border-bottom: 1px solid #ddd;
+}
+
+/* PRODUCT GRID */
+
+.product-grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 25px;
+}
+
+/* CARDS */
+
+/* CARDS */
+
+.card {
+background: #FFFDF9;
+border-radius: 18px;
+overflow: hidden;
+box-shadow: 0 8px 20px rgba(0,0,0,.08);
+text-align: center;
+transition: 0.3s;
+padding-bottom: 20px;
+}
+
+.card:hover {
+transform: translateY(-8px);
+}
+
+.card img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+}
+
+.card h3 {
+margin: 15px 0 10px;
+}
+
+.card p {
+padding: 0 15px;
+}
+
+.card strong {
+display: block;
+margin: 20px 0;
+color: var(--primary);
+font-size: 22px;
+}
+
+/* TABLE */
+
+table {
+margin: 20px auto;
+border-collapse: collapse;
+width: 60%;
+background: white;
+box-shadow: var(--shadow);
+}
+
+th,
+td {
+padding: 12px;
+text-align: center;
+border: 1px solid #ddd;
+}
+
+th {
+background: var(--primary);
+color: white;
+}
+
+tr:nth-child(even) {
+background: #F8F3EE;
+}
+
+/* FORM */
+
+form {
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: var(--shadow);
+}
+
+input,
+textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+button {
+background: var(--primary);
+color: white;
+border: none;
+padding: 10px 18px;
+border-radius: 5px;
+cursor: pointer;
+transition: .3s;
+}
+
+button:hover {
+background: #8B5E3C;
+}
+
+/* TABLET */
+
+@media (min-width:768px){
+
+nav{
+flex-direction:row;
+justify-content:center;
+gap:20px;
+}
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* DESKTOP */
+
+@media (min-width:1024px){
+
+.menu-layout{
+grid-template-columns:250px 1fr;
+align-items:start;
+}
+
+.sidebar{
+align-self:start;
+}
+
+.product-grid{
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+}
+
+/* FOOTER */
+
+footer{
+background: #2C241B;
+color: white;
+text-align: center;
+padding: 35px;
+margin-top: 60px;
+}
